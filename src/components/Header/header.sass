@@ -1,3 +1,6 @@
+$breakpoint-tablet: 768px
+
+
 .match-container
     padding: 3rem
     background-color: #ddd
@@ -11,9 +14,9 @@
         width: 100%
         max-width: 400px
         display: grid
-        grid-template-columns: 3fr 2fr 1fr
 
         div
+            overflow: hidden
             border: 1px solid green
         .team
             order: 1
@@ -32,11 +35,34 @@
             font-weight: 900
             color: #303030
     .visitor
-        grid-template-columns: 1fr 2fr 3fr
         .team
             order: 3
+        .flag
+            order: 2
         .score
             order: 1
+
+@media (min-width: $breakpoint-tablet)
+    .host
+        grid-template-columns: auto 4rem 3rem
+    .visitor
+        grid-template-columns: 3rem 4rem auto
+    .team
+        .abrev
+            display: none
+
+@media (max-width: $breakpoint-tablet)
+    .host
+        grid-template-columns: 2fr 2fr 1fr
+    .visitor
+        grid-template-columns: 1fr 2fr 2fr
+    .team
+        .name
+            display: none
+        .abrev
+            display: block
+
+
 .match-info
     margin-top: 2rem
     display: flex
