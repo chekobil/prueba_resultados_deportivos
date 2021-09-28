@@ -1,0 +1,45 @@
+.match-container
+    padding: 3rem
+    background-color: #ddd
+.match-result
+    padding: 0 1rem
+    display: flex
+    flex-direction: row
+    justify-content: center
+    align-items: center
+    .host, .visitor
+        width: 100%
+        max-width: 400px
+        display: grid
+        grid-template-columns: 3fr 2fr 1fr
+
+        div
+            border: 1px solid green
+        .team
+            order: 1
+            font-size: 2rem
+            font-weight: 900
+            color: #303030
+        .flag
+            order: 2
+            overflow: hidden
+            img
+                width: 4rem
+                height: auto
+        .score
+            order: 3
+            font-size: 2rem
+            font-weight: 900
+            color: #303030
+    .visitor
+        grid-template-columns: 1fr 2fr 3fr
+        .team
+            order: 3
+        .score
+            order: 1
+.match-info
+    margin-top: 2rem
+    display: flex
+    flex-direction: row
+    justify-content: center
+    align-items: flex-end
