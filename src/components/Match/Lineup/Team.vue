@@ -4,6 +4,7 @@
 
   defineProps({
     data: Object,
+    rival: Object
   })
 </script>
 
@@ -26,12 +27,23 @@
 <template>
 
     <div class="team">
-        <span class="name">
-            {{data.team.toUpperCase()}}
-        </span>
-        <span class="flag">
-            <img :src="data.flag" alt="flag">
-        </span>
+
+        <div class="active">
+            <span class="name">
+                {{data.team.toUpperCase()}}
+            </span>
+            <span class="flag">
+                <img :src="data.flag" alt="flag">
+            </span>
+        </div>
+        <div class="inactive">
+            <span class="name">
+                {{rival.abrev.toUpperCase()}}
+            </span>
+            <span class="flag">
+                <img :src="rival.flag" alt="flag">
+            </span>
+        </div>
     </div>
     <div class="players">
         <div class="goalkeeper">

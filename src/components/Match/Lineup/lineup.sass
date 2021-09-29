@@ -1,29 +1,54 @@
 
 .lineup
+    width:100%
     display: grid
     grid-gap: 1.5rem
     grid-template-columns: 1fr 1fr
+    justify-content: center
+    overflow: hidden
     .host, .visitor
         background-color: transparent
-        
         .team
+            display: grid
+            grid-template-columns: 6fr 1fr
+            align-items: center
+            justify-content: center
+            align-content: center
             padding: 1rem 2.4rem
             border-radius: 0.6rem 0.6rem 0 0
-            display: grid
-            grid-template-columns: 1fr 4fr
-            align-items: center
             background-color: var(--lineup-title-bg-color)
-            div
-                
-            .name
-                order: 2
-                font-size: 1.5rem
-                font-weight: 900
-            .flag
-                order: 1
-                img
-                    width: 35px
-                    vertical-align: middle
+            .inactive
+                display: flex
+                flex-direction: column
+                justify-content: center
+                align-items: center
+                .name
+                    order: 2
+                    font-size: 1.5rem
+                    font-weight: 900
+                .flag
+                    order: 1
+                    img
+                        width: 35px
+                        vertical-align: middle
+                &:hover
+                    opacity: 0.5
+                    cursor: pointer
+            .active
+                display: grid
+                grid-template-columns: 1fr 4fr
+                align-items: center
+                justify-content: center
+                align-content: center
+                .name
+                    order: 2
+                    font-size: 1.5rem
+                    font-weight: 900
+                .flag
+                    order: 1
+                    img
+                        width: 35px
+                        vertical-align: middle
         .players
             display: grid
             grid-template-columns: 1fr
@@ -42,8 +67,21 @@
                     text-align: left
                 .extras
                     order: 3
-            div
-                border: 0px solid red
+                    color: #ffd233
+                    width: 2rem
+                    font-weight: 900
+                    font-size: 1.2rem
+                    .card
+                        div
+                            margin-top: 0
+                    .icon
+                        color: var(--active-link-color)
+                        svg
+                            color: var(--active-link-color)
+                        div
+                            margin-top: -2.75rem
+                            margin-left: -2.5rem
+
             .goalkeeper, .start, .substitutions
                 display: grid
                 grid-template-columns: 1fr
@@ -54,18 +92,24 @@
                 text-align: center
             .substitutions
                 .title
-                    font-size: 1.2rem
+                    padding: 0 1.3rem 1rem 1.3rem
+                    font-size: 1rem
                     font-weight: 600
                     text-align: left
     .visitor
         .team
-            grid-template-columns: 4fr 1fr
-            .name
-                order: 1
-                text-align: right
-            .flag
+            grid-template-columns: 1fr 6fr
+            .active
                 order: 2
-                text-align: right
+                grid-template-columns: 4fr 1fr
+                .name
+                    order: 1
+                    text-align: right
+                .flag
+                    order: 2
+                    text-align: right
+            .inactive
+                order: 1
         .players
             align-items: right
             .player
@@ -83,3 +127,24 @@
                     text-align: right
             .goalkeeper, .start, .substitutions
                 justify-items: end
+
+
+@media (max-width: 768px)
+    .lineup
+        grid-template-columns: 1fr
+        .visitor
+            display: none
+        .host
+            .active
+                display: block
+@media (min-width: 768px)
+    .lineup
+        .host, .visitor
+            .team
+                .inactive
+                    display: none
+        .visitor
+            .team
+                grid-template-columns: 1fr
+
+

@@ -1,8 +1,47 @@
 
-ul
-    list-style: none
-    display: flex
-    flex-direction: row
-    justify-content: center
-    li
-        padding: 0 1rem
+.timeline-container
+    width: 100%
+    background-color: var(--match-bg-color)
+    .timeline
+        padding: 3rem
+        display: grid
+        grid-gap: 0
+        grid-template-rows: repeat(auto,1fr)
+        grid-template-rows: 1fr
+        background-color: transparent
+        .action
+            border-bottom: 1px solid #898787
+            padding: 1rem 2rem
+            display: grid
+            grid-template-columns: 1fr 6fr
+            &:first-child
+                border-radius: 0.6rem 0.6rem 0 0
+            &:last-child
+                border-radius: 0 0 0.6rem 0.6rem
+                border-bottom: 0
+        .time-icon
+            dispay: grid
+            grid-template-columns: 1fr
+            grid-template-rows: 1fr 1fr
+            justify-items: center
+            align-content: center
+            justify-content: center
+            align-items: center
+            .min
+                width: 2rem
+                text-align: center
+                font-size: 1rem
+                font-weight: 900
+            .icon
+                width: 2rem
+        .message
+            .title
+                font-size: 1.5rem
+                font-weight: 600
+            .text
+                font-size: 1rem
+
+    @media screen and ( max-width: 768px  )
+        .timeline
+            padding: 1rem 0
+        

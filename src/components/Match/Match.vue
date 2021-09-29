@@ -1,5 +1,4 @@
 <script setup>
-  import Menu from './Menu/Menu.vue'
   import Lineup from './Lineup/Lineup.vue'
   import Timeline from './Timeline/Timeline.vue'
 
@@ -8,15 +7,28 @@
   defineProps({
     data: Object
   })
+</script>
 
+<script>
+  export default {
+    data() {
+      return {
+        showLineup: true
+      }
+    }
+  }
 </script>
 
 <template>
   <div class="match-container">
-    <Menu />
+    <div class="menu">
+        <div class="item" :class="{active: showLineup}" @click="showLineup=true">Line Up</div>
+        <div class="item" :class="{active: !showLineup}" @click="showLineup=false">Timeline</div>
+        <div class="item">Info</div>
+    </div>
     <div class="match">
-      <Lineup />
-      <Timeline />
+      <Lineup v-if="showLineup" />
+      <Timeline v-else="showLineup" />
     </div>
   </div>
 

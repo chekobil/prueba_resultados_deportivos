@@ -9,6 +9,7 @@
             return {
                 host: {
                     team: 'Uzbekistan',
+                    abrev: 'UZB',
                     flag: "https://cloudinary.fifa.com/api/v1/picture/flags-sq-5/UZB?tx=c_fill,g_auto,q_auto,w_256",
                     players: {
                         goalkeeper: [
@@ -42,10 +43,10 @@
     <div class="lineup">
 
         <div class="host">
-            <Team :data="host" />
+            <Team :data="host" :rival="host" />
         </div>
         <div class="visitor">
-            <Team :data="host" />
+            <Team :data="host" :rival="host" />
         </div>
 
     </div>

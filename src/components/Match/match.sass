@@ -3,8 +3,29 @@
     background-color: var(--match-bg-color)
     .match
         margin: 0 auto
+        padding-bottom: 6rem
         width: 80%
         max-width: 900px
         display: grid
         grid-template-columns: 1fr
         grid-template-rows: 1fr
+        justify-items: center
+.menu
+    margin: 0
+    padding: 2.5rem 0
+    list-style: none
+    display: flex
+    flex-direction: row
+    justify-content: center
+    .item
+        font-weight: 900
+        margin: 0 1rem
+        padding: 1rem 0
+        border-bottom: 2px solid transparent
+        &:hover
+            color: var(--active-link-color)
+            border-bottom: 2px solid var(--active-link-color)
+            cursor: pointer
+    .active
+        color: var(--active-link-color)
+        border-bottom: 2px solid var(--active-link-color)
