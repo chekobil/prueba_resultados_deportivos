@@ -1,5 +1,5 @@
 <script setup>
-    import './header.sass'
+    import './result.sass'
     defineProps({
         data: Object
     })
@@ -7,11 +7,11 @@
 
 
 <template>
-    <div class="match-container">
+    <div class="match-header-container">
         <div class="match-result">
+
             <div class="host">
-                
-                <div class='team'>
+                <div class='header-team'>
                     <span class="name">{{ data.host }}</span>
                     <span class="abrev">UZB</span>
                 </div>
@@ -20,8 +20,13 @@
                 </div>
                 <div class="score">4</div>
             </div>
+
+            <div class="divider">
+                -
+            </div>
+            
             <div class="visitor">
-                <div class='team'>
+                <div class='header-team'>
                     <span class="name">{{ data.visitor }}</span>
                     <span class="abrev">GUA</span>
                 </div>
@@ -30,13 +35,19 @@
                 </div>
                 <div class="score">4</div>
             </div>
+
         </div>
+
         <div class='match-info'>
             <div class="tournament">FIFA Futsal</div>
+            <span> · </span>
             <div class="date">2021-09-12</div>
+            <span> · </span>
             <div class="time">17:00</div>
+            <span> · </span>
             <div class="venue">Vilnius Arena</div>
         </div>
+
     </div>
 </template>
 

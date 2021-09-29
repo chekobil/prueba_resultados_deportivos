@@ -1,7 +1,7 @@
+
 <script setup>
-  import HelloWorld from './components/HelloWorld.vue'
-  import Header from './components/Header/Header.vue'
-  import Menu from './components/Menu/Menu.vue'
+  import Match from './components/Match/Match.vue'
+  import Result from './components/Result/Result.vue'
 </script>
 
 <script>
@@ -18,19 +18,24 @@
 </script>
 
 <template>
-
-  <Header v-bind:data=data />
-  <Menu />
-  <HelloWorld msg="Hello Vue 3 + Vite" />
-
+  <Result :data="data" />
+  <Match />
 </template>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:ital,wght@0,300;0,700;1,300&display=swap');
+
+:root{
+  --header-bg-color: #000f2c;
+  --match-bg-color: #f7f9fc;
+  --lineup-title-bg-color: #e4e8f0;
+  --active-link-color: #1277d9;
+  --breakpoint-tablet: 768px;
 }
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Open Sans Condensed';
+}
+
 </style>

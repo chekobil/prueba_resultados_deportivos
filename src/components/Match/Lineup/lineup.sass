@@ -1,0 +1,85 @@
+
+.lineup
+    display: grid
+    grid-gap: 1.5rem
+    grid-template-columns: 1fr 1fr
+    .host, .visitor
+        background-color: transparent
+        
+        .team
+            padding: 1rem 2.4rem
+            border-radius: 0.6rem 0.6rem 0 0
+            display: grid
+            grid-template-columns: 1fr 4fr
+            align-items: center
+            background-color: var(--lineup-title-bg-color)
+            div
+                
+            .name
+                order: 2
+                font-size: 1.5rem
+                font-weight: 900
+            .flag
+                order: 1
+                img
+                    width: 35px
+                    vertical-align: middle
+        .players
+            display: grid
+            grid-template-columns: 1fr
+            padding: 2rem 1rem
+            background-color: #fff
+            border-radius: 0 0 0.6rem 0.6rem
+            .player
+                display: grid
+                grid-template-columns: 3rem 11rem 3rem
+                align-items: auto
+                line-height: 2.2rem
+                .dorsal
+                    order: 1
+                .name
+                    order: 2
+                    text-align: left
+                .extras
+                    order: 3
+            div
+                border: 0px solid red
+            .goalkeeper, .start, .substitutions
+                display: grid
+                grid-template-columns: 1fr
+                justify-items: start
+                border-bottom: 1px solid #ddd
+                margin-bottom: 1.5rem
+                padding-bottom: 0.75rem
+                text-align: center
+            .substitutions
+                .title
+                    font-size: 1.2rem
+                    font-weight: 600
+                    text-align: left
+    .visitor
+        .team
+            grid-template-columns: 4fr 1fr
+            .name
+                order: 1
+                text-align: right
+            .flag
+                order: 2
+                text-align: right
+        .players
+            align-items: right
+            .player
+                grid-template-columns: 3rem 11rem 3rem
+                align-items: right
+                .dorsal
+                    order: 3
+                .name
+                    order: 2
+                    text-align: right
+                .extras
+                    order: 1
+            .substitutions
+                .title
+                    text-align: right
+            .goalkeeper, .start, .substitutions
+                justify-items: end

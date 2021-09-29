@@ -1,0 +1,90 @@
+
+.match-header-container
+    background-color: var(--header-bg-color)
+    padding: 3.5rem 2rem 1rem 2rem
+.match-result
+    margin: 0 auto
+    width: 80%
+    max-width: 800px
+    padding: 0 1rem
+    display: flex
+    flex-direction: row
+    justify-content: center
+    align-items: center
+    color: #fff
+    .divider
+        font-size: 3rem
+        font-weight: 900
+    .host
+        display: grid
+        grid-template-columns: 2fr 2fr 1fr
+        justify-content: center
+        align-items: center
+    .host, .visitor
+        width: 100%
+        .header-team
+            order: 1
+            font-weight: 900
+            text-align: left
+        .flag
+            order: 2
+            overflow: hidden
+            text-align: center
+            img
+                width: 90%
+                max-width: 4.5rem
+                height: auto
+                vertical-align: middle
+        .score
+            order: 3
+            font-weight: 900
+            text-align: center
+    .visitor
+        display: grid
+        grid-template-columns: 1fr 2fr 2fr
+        align-items: center
+        .header-team
+            order: 3
+            text-align: right
+        .flag
+            order: 2
+        .score
+            order: 1
+
+@media (min-width: 768px)
+    .host
+        grid-template-columns: auto 4rem 3rem
+    .visitor
+        grid-template-columns: 3rem 4rem auto
+    .header-team
+        font-size: 2.3rem
+        .abrev
+            display: none
+    .score
+        font-size: 4rem
+
+@media (max-width: 768px)
+    .host
+        grid-template-columns: 2fr 2fr 1fr
+    .visitor
+        grid-template-columns: 1fr 2fr 2fr
+    .header-team
+        font-size: 2rem
+        .abrev
+            display: block
+        .name
+            display: none
+    .score
+        font-size: 3rem
+
+
+.match-info
+    color: #fff
+    margin-top: 1.5rem
+    display: flex
+    flex-direction: row
+    flex-wrap: wrap
+    justify-content: center
+    align-items: flex-end
+    div
+        padding: 0 0.3rem
