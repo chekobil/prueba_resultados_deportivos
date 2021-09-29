@@ -32,7 +32,7 @@
 
 <template>
 
-    <div class="player" v-for="player in list" :key="list[2]">
+    <div class="player" v-for="player in list" :key="player[2]">
         <div class="dorsal">
             <strong>{{ player[2] }}</strong>
         </div>

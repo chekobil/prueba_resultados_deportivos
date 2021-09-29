@@ -6,8 +6,18 @@
 
 <script>
     const data = {
-      host: 'Uzbekistan',
-      visitor: 'Guatemala'
+      host: {
+        team: 'Uzbekistan',
+        abrev: 'UZB',
+        flag: "https://cloudinary.fifa.com/api/v1/picture/flags-sq-5/UZB?tx=c_fill,g_auto,q_auto,w_256",
+        result: 4
+      },
+      visitor: {
+        team: 'Guatemala',
+        abrev: 'GUA',
+        flag: "https://cloudinary.fifa.com/api/v1/picture/flags-sq-5/GUA?tx=c_fill,g_auto,q_auto,w_256",
+        result: 5
+      }
     }
 
     export default {

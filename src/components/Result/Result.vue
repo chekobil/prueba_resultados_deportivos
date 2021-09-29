@@ -1,5 +1,6 @@
 <script setup>
     import './result.sass'
+    import TeamHeader from './TeamHeader.vue'
     defineProps({
         data: Object
     })
@@ -11,29 +12,13 @@
         <div class="match-result">
 
             <div class="host">
-                <div class='header-team'>
-                    <span class="name">{{ data.host }}</span>
-                    <span class="abrev">UZB</span>
-                </div>
-                <div class="flag">
-                    <img src="https://cloudinary.fifa.com/api/v1/picture/flags-sq-5/UZB?tx=c_fill,g_auto,q_auto,w_256" alt="{{ data.host }} flag">
-                </div>
-                <div class="score">4</div>
+                <TeamHeader :team="data.host" />
             </div>
-
             <div class="divider">
                 -
             </div>
-            
             <div class="visitor">
-                <div class='header-team'>
-                    <span class="name">{{ data.visitor }}</span>
-                    <span class="abrev">GUA</span>
-                </div>
-                <div class="flag">
-                    <img src="https://cloudinary.fifa.com/api/v1/picture/flags-sq-5/GUA?tx=c_fill,g_auto,q_auto,w_256" alt="{{ data.visitor }} flag">
-                </div>
-                <div class="score">4</div>
+                <TeamHeader :team="data.visitor" />
             </div>
 
         </div>
@@ -51,9 +36,3 @@
     </div>
 </template>
 
-
-<style scoped>
-    a {
-    color: #42b983;
-    }
-</style>
